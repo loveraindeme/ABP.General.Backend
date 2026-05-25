@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="8.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\General.Backend.Domain.Shared\General.Backend.Domain.Shared.csproj" />
+	<Using Include="Volo.Abp.Application.Services" />
+	<Using Include="Volo.Abp.Application.Dtos" />
+	<Using Include="Volo.Abp.Auditing" />
+	<Using Include="General.Backend.Domain.Shared.Enums" />
+  </ItemGroup>
+
+</Project>

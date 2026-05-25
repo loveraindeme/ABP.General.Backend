@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="8.3.0" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.MySQL" Version="8.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\General.Backend.Domain\General.Backend.Domain.csproj" />
+	<Using Include="Microsoft.Extensions.DependencyInjection" />
+	<Using Include="Microsoft.EntityFrameworkCore.Metadata.Builders" />
+	<Using Include="Microsoft.EntityFrameworkCore" />
+	<Using Include="Volo.Abp.EntityFrameworkCore.Modeling" />
+	<Using Include="Volo.Abp.EntityFrameworkCore" />
+	<Using Include="Volo.Abp.EntityFrameworkCore.MySQL" />
+	<Using Include="Volo.Abp.Data" />
+	<Using Include="General.Backend.Domain.Entities" />
+	<Using Include="General.Backend.Domain.Shared.Consts" />
+	<Using Include="General.Backend.Domain.IRepositories" />
+	<Using Include="General.Backend.Domain.Specifications" />
+  </ItemGroup>
+
+</Project>

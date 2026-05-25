@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Ddd.Domain" Version="8.3.0" />
+    <ProjectReference Include="..\General.Backend.Domain.Shared\General.Backend.Domain.Shared.csproj" />
+	<Using Include="JetBrains.Annotations" />
+	<Using Include="Volo.Abp" />
+	<Using Include="Volo.Abp.Auditing" />
+	<Using Include="Volo.Abp.Domain.Entities" />
+	<Using Include="Volo.Abp.Domain.Repositories" />
+	<Using Include="Volo.Abp.Domain.Entities.Auditing" />
+	<Using Include="Volo.Abp.Domain.Services" />
+	<Using Include="General.Backend.Domain.CacheItems" />
+	<Using Include="General.Backend.Domain.Specifications" />
+	<Using Include="General.Backend.Domain.IRepositories" />
+	<Using Include="General.Backend.Domain.Entities" />
+	<Using Include="General.Backend.Domain.Shared.Consts" />
+	<Using Include="General.Backend.Domain.Shared.Enums" />
+	<Using Include="General.Backend.Domain.Shared.Helper" />
+  </ItemGroup>
+
+</Project>
