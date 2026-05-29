@@ -13,6 +13,9 @@
             });
             builder.ConfigureByConvention();
 
+            builder.Property(menu => menu.Id)
+                .HasComment("主键");
+
             builder.Property(menu => menu.Code)
                 .HasMaxLength(MenuConsts.MaxCodeLength)
                 .IsRequired()

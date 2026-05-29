@@ -23,6 +23,9 @@
             builder.Property(rel => rel.RoleId)
                 .IsRequired()
                 .HasComment("角色Id");
+
+            builder.Property(rel => rel.CreationTime)
+                .HasComment("创建时间");
         }
     }
 }
