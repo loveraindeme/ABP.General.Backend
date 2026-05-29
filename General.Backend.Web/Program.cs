@@ -7,7 +7,11 @@ namespace General.Backend.Web
     {
         public static void Main(string[] args)
         {
-            Directory.SetCurrentDirectory(AppContext.BaseDirectory);
+            var isDevelopment = IsDevelopmentEnvironment();
+            if (!isDevelopment)
+            {
+                Directory.SetCurrentDirectory(AppContext.BaseDirectory);
+            }
             InitializeLog();
             var builder = WebApplication.CreateBuilder(args);
 
@@ -52,6 +56,13 @@ namespace General.Backend.Web
             .MinimumLevel.Override("Microsoft.EntityFrameworkCore", LogEventLevel.Warning)
             .ReadFrom.Configuration(builder.Build())
             .CreateLogger();
+        }
+
+        private static bool IsDevelopmentEnvironment()
+        {
+            var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")
+                ?? Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT");
+            return string.Equals(environmentName, Environments.Development, StringComparison.OrdinalIgnoreCase);
         }
     }
 }

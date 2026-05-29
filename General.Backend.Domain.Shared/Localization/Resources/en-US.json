@@ -1,0 +1,7 @@
+{
+  "culture": "en-US",
+  "texts": {
+    "HelloWorld": "Hello world",
+    "HelloName": "Hello, {0}"
+  }
+}

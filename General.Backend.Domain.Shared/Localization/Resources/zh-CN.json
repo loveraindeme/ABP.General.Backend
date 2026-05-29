@@ -1,0 +1,7 @@
+{
+  "culture": "zh-CN",
+  "texts": {
+    "HelloWorld": "你好，世界",
+    "HelloName": "你好, {0}"
+  }
+}

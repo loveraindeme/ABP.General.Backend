@@ -1,5 +1,6 @@
 ﻿using General.Backend.Application;
 using General.Backend.Application.Options;
+using General.Backend.Domain.Shared;
 using General.Backend.Domain.Shared.Helper;
 using General.Backend.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -14,6 +15,7 @@ using Volo.Abp.Caching;
 using Volo.Abp.Json;
 using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
+using Volo.Abp.VirtualFileSystem;
 
 namespace General.Backend.Web
 {
@@ -28,6 +30,7 @@ namespace General.Backend.Web
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
+            var env = context.Services.GetHostingEnvironment();
             var configuration = context.Services.GetConfiguration();
 
             Configure<AbpJsonOptions>(options =>
@@ -41,6 +44,7 @@ namespace General.Backend.Web
             ConfigureAuthentication(context, configuration);
             ConfigureAutoApiController();
             ConfigureSwagger(context);
+            ConfigureVirtualFileSystem(env);
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
@@ -56,6 +60,7 @@ namespace General.Backend.Web
             app.UseStaticFiles();
             app.UseRouting();
             app.UseCors("GeneralCors");
+            app.UseAbpRequestLocalization();
             app.UseAuthentication();
             app.UseAuthorization();
 
@@ -189,6 +194,20 @@ namespace General.Backend.Web
                     }
                 });
             });
+        }
+
+        private void ConfigureVirtualFileSystem(IWebHostEnvironment hostingEnvironment)
+        {
+            if (hostingEnvironment.IsDevelopment())
+            {
+                Configure<AbpVirtualFileSystemOptions>(options =>
+                {
+                    options.FileSets.ReplaceEmbeddedByPhysical<GeneralDomainSharedModule>(
+                        Path.Combine(
+                            hostingEnvironment.ContentRootPath,
+                            $"..{Path.DirectorySeparatorChar}{typeof(GeneralDomainSharedModule).Assembly.GetName().Name}"));
+                });
+            }
         }
     }
 }
