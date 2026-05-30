@@ -7,7 +7,6 @@ namespace General.Backend.Application
     /// <summary>
     /// 本地化应用服务
     /// </summary>
-    [AllowAnonymous]
     public class LocalizationAppService : ApplicationService, ILocalizationAppService
     {
         private readonly IStringLocalizer<GeneralBackendResource> _stringLocalizer;
