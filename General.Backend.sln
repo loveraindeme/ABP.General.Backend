@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.11.35219.272
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11822.322 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2BFE5E49-115F-45B2-84C0-6B66D56A2ED6}"
 EndProject
@@ -26,6 +26,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "General.Backend.DbMigrator", "General.Backend.DbMigrator\General.Backend.DbMigrator.csproj", "{6F996809-B81B-4EB1-B4FC-19D1854BE28C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General.Backend.Web", "General.Backend.Web\General.Backend.Web.csproj", "{B792494F-6C4D-4F18-B63D-BEC8A6C85477}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{6D8AC023-6FA8-4C9A-A71C-66FF5D10E8D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ftp", "Ftp", "{7C6B78EA-202B-4F4D-80BA-698D2BBA949F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General.Ftp", "Modules\Ftp\General.Ftp\General.Ftp.csproj", "{D7DA3B66-E3D7-46ED-8749-51C0A15E2D7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +79,10 @@ Global
 		{B792494F-6C4D-4F18-B63D-BEC8A6C85477}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B792494F-6C4D-4F18-B63D-BEC8A6C85477}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B792494F-6C4D-4F18-B63D-BEC8A6C85477}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7DA3B66-E3D7-46ED-8749-51C0A15E2D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7DA3B66-E3D7-46ED-8749-51C0A15E2D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7DA3B66-E3D7-46ED-8749-51C0A15E2D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7DA3B66-E3D7-46ED-8749-51C0A15E2D7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +98,9 @@ Global
 		{F953B8F0-E595-4F88-965F-7E6E95DC6C21} = {78AC2399-C3F2-4CD0-8B88-ACE467B365AD}
 		{6F996809-B81B-4EB1-B4FC-19D1854BE28C} = {2BFE5E49-115F-45B2-84C0-6B66D56A2ED6}
 		{B792494F-6C4D-4F18-B63D-BEC8A6C85477} = {2BFE5E49-115F-45B2-84C0-6B66D56A2ED6}
+		{6D8AC023-6FA8-4C9A-A71C-66FF5D10E8D4} = {2BFE5E49-115F-45B2-84C0-6B66D56A2ED6}
+		{7C6B78EA-202B-4F4D-80BA-698D2BBA949F} = {6D8AC023-6FA8-4C9A-A71C-66FF5D10E8D4}
+		{D7DA3B66-E3D7-46ED-8749-51C0A15E2D7E} = {7C6B78EA-202B-4F4D-80BA-698D2BBA949F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35FF85DC-6C28-484B-9E0B-3F0CBD292C15}

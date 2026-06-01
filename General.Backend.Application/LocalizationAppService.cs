@@ -1,5 +1,4 @@
 ﻿using General.Backend.Domain.Shared.Localization;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Localization;
 
 namespace General.Backend.Application
