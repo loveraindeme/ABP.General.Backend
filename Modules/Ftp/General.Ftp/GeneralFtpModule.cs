@@ -9,6 +9,7 @@ namespace General.Ftp
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             context.Services.AddTransient<AppSettingsFtpConnectionOptionsProvider>();
+            context.Services.AddTransient<IFtpConnectionOptionsProvider, AppSettingsFtpConnectionOptionsProvider>();
             context.Services.AddTransient<FtpFileServiceBuilder, DefaultFtpFileServiceBuilder>();
         }
     }
