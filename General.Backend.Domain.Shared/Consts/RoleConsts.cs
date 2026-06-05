@@ -26,6 +26,6 @@
 
         public const int MinMenuCodeLength = 1;
 
-        public const int MaxRemarkLength = 255;
+        public const int MaxRemarkLength = 256;
     }
 }

@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\General.Backend.Domain\General.Backend.Domain.csproj" />
+    <ProjectReference Include="..\Modules\InformationCollection\General.InformationCollection.EntityFrameworkCore\General.InformationCollection.EntityFrameworkCore.csproj" />
 	<Using Include="Microsoft.Extensions.DependencyInjection" />
 	<Using Include="Microsoft.EntityFrameworkCore.Metadata.Builders" />
 	<Using Include="Microsoft.EntityFrameworkCore" />

@@ -1,4 +1,5 @@
-﻿using Volo.Abp.Modularity;
+﻿using General.InformationCollection.EntityFrameworkCore;
+using Volo.Abp.Modularity;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 
 namespace General.Backend.EntityFrameworkCore
@@ -6,6 +7,7 @@ namespace General.Backend.EntityFrameworkCore
     [DependsOn(
         typeof(AbpEntityFrameworkCoreModule),
         typeof(AbpEntityFrameworkCoreMySQLModule),
+        typeof(GeneralInformationCollectionEntityFrameworkCoreModule),
         typeof(AbpSettingManagementEntityFrameworkCoreModule)
         )]
     public class GeneralEntityFrameworkCoreModule : AbpModule

@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Volo.Abp;
+using Volo.Abp.Data;
 
 namespace General.Backend.DbMigrator
 {
@@ -25,6 +26,7 @@ namespace General.Backend.DbMigrator
             {
                 options.Services.ReplaceConfiguration(_configuration);
                 options.UseAutofac();
+                options.AddDataMigrationEnvironment();
             }))
             {
                 await application.InitializeAsync();

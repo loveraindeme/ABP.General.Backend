@@ -2,7 +2,9 @@
 using General.Backend.Domain.Shared;
 using General.Ftp;
 using General.Ftp.Contracts;
+using General.InformationCollection.Domain;
 using Microsoft.Extensions.DependencyInjection;
+using Volo.Abp.Domain;
 using Volo.Abp.Modularity;
 using Volo.Abp.SettingManagement;
 
@@ -10,6 +12,8 @@ namespace General.Backend.Domain
 {
     [DependsOn(
         typeof(GeneralDomainSharedModule),
+        typeof(GeneralInformationCollectionDomainModule),
+        typeof(AbpDddDomainModule),
         typeof(AbpSettingManagementDomainModule),
         typeof(GeneralFtpModule)
     )]

@@ -11,6 +11,7 @@
     <PackageReference Include="Volo.Abp.SettingManagement.Domain" Version="8.3.0" />
     <ProjectReference Include="..\General.Backend.Domain.Shared\General.Backend.Domain.Shared.csproj" />
     <ProjectReference Include="..\Modules\Ftp\General.Ftp\General.Ftp.csproj" />
+    <ProjectReference Include="..\Modules\InformationCollection\General.InformationCollection.Domain\General.InformationCollection.Domain.csproj" />
 	<Using Include="JetBrains.Annotations" />
 	<Using Include="Volo.Abp" />
 	<Using Include="Volo.Abp.Auditing" />

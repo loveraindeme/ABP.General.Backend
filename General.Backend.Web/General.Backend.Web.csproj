@@ -4,6 +4,10 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	<SatelliteResourceLanguages>x</SatelliteResourceLanguages>
+	<FileVersion>1.0.0</FileVersion>
+	<Version>1.0.0</Version>
+	<SourceRevisionId>$([System.DateTime]::Now.ToString("yyyy-MM-dd HH:mm:ss"))</SourceRevisionId>
   </PropertyGroup>
 
   <ItemGroup>

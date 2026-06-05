@@ -3,6 +3,7 @@ using General.Backend.Application.Options;
 using General.Backend.Domain.Shared;
 using General.Backend.Domain.Shared.Helper;
 using General.Backend.EntityFrameworkCore;
+using General.InformationCollection.Domain;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -37,6 +38,11 @@ namespace General.Backend.Web
             {
                 options.OutputDateTimeFormat = ConstantHelper.DateTimeFormat;
                 options.InputDateTimeFormats = [ConstantHelper.DateTimeFormat, ConstantHelper.DateFormat];
+            });
+
+            Configure<InformationCollectionOptions>(options =>
+            {
+                options.ModuleName = "General";
             });
 
             ConfigureCors(context);
