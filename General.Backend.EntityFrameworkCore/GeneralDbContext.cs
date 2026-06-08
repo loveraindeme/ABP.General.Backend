@@ -1,4 +1,5 @@
 ﻿using General.Backend.EntityFrameworkCore.Mappings.Extensions;
+using General.InformationCollection.EntityFrameworkCore;
 using System.Reflection;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.SettingManagement;
@@ -30,6 +31,7 @@ namespace General.Backend.EntityFrameworkCore
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.ConfigureInformationCollection();
             modelBuilder.ConfigureSystemSetting();
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
