@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\General.Backend.Application.Contracts\General.Backend.Application.Contracts.csproj" />
     <ProjectReference Include="..\General.Backend.Domain\General.Backend.Domain.csproj" />
+    <ProjectReference Include="..\Modules\InformationCollection\General.InformationCollection.Application\General.InformationCollection.Application.csproj" />
 
 	<Using Include="General.Backend.Application.Contracts" />
 	<Using Include="General.Backend.Domain" />

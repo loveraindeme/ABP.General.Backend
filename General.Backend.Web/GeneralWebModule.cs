@@ -3,6 +3,7 @@ using General.Backend.Application.Options;
 using General.Backend.Domain.Shared;
 using General.Backend.Domain.Shared.Helper;
 using General.Backend.EntityFrameworkCore;
+using General.InformationCollection.Application;
 using General.InformationCollection.Domain;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -25,6 +26,7 @@ namespace General.Backend.Web
         typeof(AbpAutofacModule),
         typeof(AbpSwashbuckleModule),
         typeof(GeneralApplicationModule),
+        typeof(GeneralInformationCollectionApplicationModule),
         typeof(GeneralEntityFrameworkCoreModule)
         )]
     public class GeneralWebModule : AbpModule
@@ -151,6 +153,7 @@ namespace General.Backend.Web
             Configure<AbpAspNetCoreMvcOptions>(options =>
             {
                 options.ConventionalControllers.Create(typeof(GeneralApplicationModule).Assembly);
+                options.ConventionalControllers.Create(typeof(GeneralInformationCollectionApplicationModule).Assembly);
             });
         }
 

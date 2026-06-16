@@ -20,6 +20,11 @@ namespace General.InformationCollection.Domain
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
+            var configuration = context.Services.GetConfiguration();
+
+            Configure<InformationCollectionOptions>(
+                configuration.GetSection(InformationCollectionOptions.InformationCollectionOption));
+
             if (context.Services.IsDataMigrationEnvironment())
             {
                 Configure<InformationCollectionOptions>(options =>
@@ -27,11 +32,6 @@ namespace General.InformationCollection.Domain
                     options.IsEnabled = false;
                 });
             }
-
-            var configuration = context.Services.GetConfiguration();
-
-            Configure<InformationCollectionOptions>(
-                configuration.GetSection(InformationCollectionOptions.InformationCollectionOption));
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)

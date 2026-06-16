@@ -3,7 +3,7 @@ namespace General.Backend.Application.Contracts.Dtos.SystemSettings
     /// <summary>
     /// 系统设置项
     /// </summary>
-    public class SystemSettingDto
+    public class SystemSettingDto : EntityDto<Guid>
     {
         /// <summary>
         /// 设置名称

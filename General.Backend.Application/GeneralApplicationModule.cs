@@ -1,4 +1,5 @@
-﻿using Volo.Abp.AutoMapper;
+﻿using General.InformationCollection.Application;
+using Volo.Abp.AutoMapper;
 using Volo.Abp.Modularity;
 using Volo.Abp.SettingManagement;
 
@@ -8,6 +9,7 @@ namespace General.Backend.Application
         typeof(AbpAutoMapperModule),
         typeof(GeneralDomainModule),
         typeof(GeneralApplicationContractsModule),
+        typeof(GeneralInformationCollectionApplicationModule),
         typeof(AbpSettingManagementApplicationModule)
         )]
     public class GeneralApplicationModule : AbpModule
