@@ -11,7 +11,7 @@ namespace General.InformationCollection.Application.Contracts
         /// 获取所有模块信息
         /// </summary>
         /// <returns></returns>
-        public Task<List<ModuleDto>> GetAllModuleAsync();
+        public Task<List<ModuleDto>> GetListAsync();
 
         /// <summary>
         /// 根据模块名称获取模块信息

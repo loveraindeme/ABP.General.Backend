@@ -19,7 +19,7 @@ namespace General.InformationCollection.Application
         /// 获取所有模块信息
         /// </summary>
         /// <returns></returns>
-        public async Task<List<ModuleDto>> GetAllModuleAsync()
+        public async Task<List<ModuleDto>> GetListAsync()
         {
             var query = await _moduleRepository.GetQueryableAsync();
             query = query.OrderBy(module => module.Id);
