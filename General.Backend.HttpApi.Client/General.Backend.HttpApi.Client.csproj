@@ -5,13 +5,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
+	
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Http.Client" Version="8.3.0" />
   </ItemGroup>
-
+	
   <ItemGroup>
-    <ProjectReference Include="..\..\..\General.Backend.HttpApi.Client\General.Backend.HttpApi.Client.csproj" />
+    <ProjectReference Include="..\General.Backend.Application.Contracts\General.Backend.Application.Contracts.csproj" />
   </ItemGroup>
-
+	
 </Project>
