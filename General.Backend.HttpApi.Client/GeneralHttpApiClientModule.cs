@@ -11,7 +11,7 @@ namespace General.Backend.HttpApi.Client
         )]
     public class GeneralHttpApiClientModule : AbpModule
     {
-        private const string remoteServiceName = "GeneralBackend";
+        public const string remoteServiceName = "GeneralBackend";
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
