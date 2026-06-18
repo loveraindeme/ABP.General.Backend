@@ -1,22 +1,22 @@
-﻿using General.Backend.HttpApi.Client;
+﻿using General.Backend.HttpApi.StaticClient.WithContracts;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Http.Client;
 using Volo.Abp.Modularity;
 
-namespace General.DynamicClient.HttpApi.Client
+namespace General.StaticClient.WithContracts.HttpApi.Client
 {
     [DependsOn(
         typeof(AbpHttpClientModule),
-        typeof(GeneralHttpApiClientModule)
+        typeof(GeneralHttpApiClientWithContractsModule)
         )]
-    public class GeneralDynamicClientHttpApiClientModule : AbpModule
+    public class GeneralStaticClientWithContractsHttpApiClientModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             context.Services.Configure<AbpRemoteServiceOptions>(options =>
             {
                 options.RemoteServices.Add(
-                    GeneralHttpApiClientModule.RemoteServiceName, 
+                    GeneralHttpApiClientWithContractsModule.RemoteServiceName,
                     new RemoteServiceConfiguration("http://localhost:5025/"));
             });
         }

@@ -11,13 +11,13 @@ namespace General.Backend.HttpApi.Client
         )]
     public class GeneralHttpApiClientModule : AbpModule
     {
-        public const string remoteServiceName = "GeneralBackend";
+        public const string RemoteServiceName = "GeneralBackend";
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             context.Services.AddHttpClientProxies(
                 typeof(GeneralApplicationContractsModule).Assembly,
-                remoteServiceConfigurationName: remoteServiceName
+                remoteServiceConfigurationName: RemoteServiceName
             );
         }
     }

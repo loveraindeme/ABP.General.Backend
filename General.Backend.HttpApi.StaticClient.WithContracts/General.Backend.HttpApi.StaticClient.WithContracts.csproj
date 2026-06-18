@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="WithContracts\app-generate-proxy.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="WithContracts\app-generate-proxy.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<ProjectReference Include="..\General.Backend.Domain.Shared\General.Backend.Domain.Shared.csproj" />
+	<PackageReference Include="Volo.Abp.Http.Client" Version="8.3.0" />
+	<PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="8.3.0" />
+  </ItemGroup>
+</Project>

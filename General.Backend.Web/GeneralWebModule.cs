@@ -84,7 +84,8 @@ namespace General.Backend.Web
 
             app.UseConfiguredEndpoints(endpoints =>
             {
-                endpoints.MapControllers().RequireAuthorization();
+                // dynamic or static client proxy call the API, need cancel the authorization
+                // endpoints.MapControllers().RequireAuthorization();
             });
         }
 
