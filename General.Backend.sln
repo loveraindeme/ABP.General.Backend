@@ -55,11 +55,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General.Backend.HttpApi.Cli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General.Backend.HttpApi.StaticClient.WithContracts", "General.Backend.HttpApi.StaticClient.WithContracts\General.Backend.HttpApi.StaticClient.WithContracts.csproj", "{081E4BFA-4AE4-4FA0-9FB9-75384DB0E4C1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StaticClinetWithContracts", "StaticClinetWithContracts", "{F5C32468-17E8-4BE3-96D3-8FAE3ECF40DF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StaticClientWithContracts", "StaticClientWithContracts", "{F5C32468-17E8-4BE3-96D3-8FAE3ECF40DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General.StaticClient.WithContracts", "Modules\StaticClientWithContracts\General.StaticClient.WithContracts\General.StaticClient.WithContracts.csproj", "{EBC9EE33-4FBA-4113-93EC-BB40ED519C41}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General.StaticClient.WithContracts.HttpApi.Client", "Modules\StaticClientWithContracts\General.StaticClient.WithContracts.HttpApi.Client\General.StaticClient.WithContracts.HttpApi.Client.csproj", "{4BD52511-E433-4F54-96A5-6C3FD5E8F7DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General.Backend.HttpApi.StaticClient.WithoutContracts", "General.Backend.HttpApi.StaticClient.WithoutContracts\General.Backend.HttpApi.StaticClient.WithoutContracts.csproj", "{C059A9E0-B1FE-470F-ABDC-AF67F8637C87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StaticClientWithoutContracts", "StaticClientWithoutContracts", "{2116BF9E-4144-44B7-87CE-80157A54FBEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General.StaticClient.WithoutContracts", "Modules\StaticClientWithoutContracts\General.StaticClient.WithoutContracts\General.StaticClient.WithoutContracts.csproj", "{E8B82F5B-47F7-4682-88AA-95465118758C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General.StaticClient.WithoutContracts.HttpApi.Client", "Modules\StaticClientWithoutContracts\General.StaticClient.WithoutContracts.HttpApi.Client\General.StaticClient.WithoutContracts.HttpApi.Client.csproj", "{2232A505-F3E1-4E87-A27D-279D500EF983}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -155,6 +163,18 @@ Global
 		{4BD52511-E433-4F54-96A5-6C3FD5E8F7DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BD52511-E433-4F54-96A5-6C3FD5E8F7DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BD52511-E433-4F54-96A5-6C3FD5E8F7DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C059A9E0-B1FE-470F-ABDC-AF67F8637C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C059A9E0-B1FE-470F-ABDC-AF67F8637C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C059A9E0-B1FE-470F-ABDC-AF67F8637C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C059A9E0-B1FE-470F-ABDC-AF67F8637C87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8B82F5B-47F7-4682-88AA-95465118758C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8B82F5B-47F7-4682-88AA-95465118758C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8B82F5B-47F7-4682-88AA-95465118758C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8B82F5B-47F7-4682-88AA-95465118758C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2232A505-F3E1-4E87-A27D-279D500EF983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2232A505-F3E1-4E87-A27D-279D500EF983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2232A505-F3E1-4E87-A27D-279D500EF983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2232A505-F3E1-4E87-A27D-279D500EF983}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -187,6 +207,10 @@ Global
 		{F5C32468-17E8-4BE3-96D3-8FAE3ECF40DF} = {6D8AC023-6FA8-4C9A-A71C-66FF5D10E8D4}
 		{EBC9EE33-4FBA-4113-93EC-BB40ED519C41} = {F5C32468-17E8-4BE3-96D3-8FAE3ECF40DF}
 		{4BD52511-E433-4F54-96A5-6C3FD5E8F7DD} = {F5C32468-17E8-4BE3-96D3-8FAE3ECF40DF}
+		{C059A9E0-B1FE-470F-ABDC-AF67F8637C87} = {2BFE5E49-115F-45B2-84C0-6B66D56A2ED6}
+		{2116BF9E-4144-44B7-87CE-80157A54FBEC} = {6D8AC023-6FA8-4C9A-A71C-66FF5D10E8D4}
+		{E8B82F5B-47F7-4682-88AA-95465118758C} = {2116BF9E-4144-44B7-87CE-80157A54FBEC}
+		{2232A505-F3E1-4E87-A27D-279D500EF983} = {2116BF9E-4144-44B7-87CE-80157A54FBEC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35FF85DC-6C28-484B-9E0B-3F0CBD292C15}

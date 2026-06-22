@@ -17,9 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-	<ProjectReference Include="..\General.Backend.Domain.Shared\General.Backend.Domain.Shared.csproj" />
 	<PackageReference Include="Volo.Abp.Http.Client" Version="8.3.0" />
-	<PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="8.3.0" />
 	<PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="8.0.25" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\General.Backend.Application.Contracts\General.Backend.Application.Contracts.csproj" />
   </ItemGroup>
 </Project>

@@ -1,31 +1,33 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using General.Backend.Application.Contracts;
+using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Http.Client;
 using Volo.Abp.Modularity;
 using Volo.Abp.VirtualFileSystem;
 
-namespace General.Backend.HttpApi.StaticClient.WithContracts
+namespace General.Backend.HttpApi.StaticClient.WithoutContracts
 {
     [DependsOn(
         typeof(AbpHttpClientModule),
-        typeof(AbpVirtualFileSystemModule)
+        typeof(AbpVirtualFileSystemModule),
+        typeof(GeneralApplicationContractsModule)
     )]
-    public class GeneralHttpApiClientWithContractsModule : AbpModule
+    public class GeneralHttpApiClientWithoutContractsModule : AbpModule
     {
         public const string RemoteServiceName = "GeneralBackend";
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             context.Services.AddStaticHttpClientProxies(
-                typeof(GeneralHttpApiClientWithContractsModule).Assembly,
+                typeof(GeneralApplicationContractsModule).Assembly,
                 RemoteServiceName
             );
 
             Configure<AbpVirtualFileSystemOptions>(options =>
             {
-                options.FileSets.AddEmbedded<GeneralHttpApiClientWithContractsModule>();
+                options.FileSets.AddEmbedded<GeneralHttpApiClientWithoutContractsModule>();
 
                 var assemblyDirectory = Path.GetDirectoryName(
-                    typeof(GeneralHttpApiClientWithContractsModule).Assembly.Location)!;
+                    typeof(GeneralHttpApiClientWithoutContractsModule).Assembly.Location)!;
                 options.FileSets.AddPhysical(Path.Combine(assemblyDirectory, "ClientProxies"));
             });
         }

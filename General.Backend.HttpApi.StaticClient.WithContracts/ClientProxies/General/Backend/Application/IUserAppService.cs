@@ -9,7 +9,7 @@ using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 
 // ReSharper disable once CheckNamespace
-namespace General.Backend.Application;
+namespace General.Backend.Application.Contracts;
 
 public interface IUserAppService : IApplicationService
 {

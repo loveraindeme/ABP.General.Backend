@@ -1,0 +1,1979 @@
+{
+  "modules": {
+    "app": {
+      "rootPath": "app",
+      "remoteServiceName": "Default",
+      "controllers": {
+        "General.Backend.Application.AuthAppService": {
+          "controllerName": "Auth",
+          "controllerGroupName": "Auth",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "General.Backend.Application.AuthAppService",
+          "summary": null,
+          "remarks": null,
+          "description": null,
+          "displayName": null,
+          "interfaces": [
+            {
+              "type": "General.Backend.Application.Contracts.IAuthAppService",
+              "name": "IAuthAppService",
+              "methods": [
+                {
+                  "name": "LoginAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "General.Backend.Application.Contracts.Dtos.Auths.UserLoginDto, General.Backend.Application.Contracts",
+                      "type": "General.Backend.Application.Contracts.Dtos.Auths.UserLoginDto",
+                      "typeSimple": "General.Backend.Application.Contracts.Dtos.Auths.UserLoginDto",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "General.Backend.Application.Contracts.Dtos.Auths.LoginUserDto",
+                    "typeSimple": "General.Backend.Application.Contracts.Dtos.Auths.LoginUserDto",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "GetUserAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "General.Backend.Application.Contracts.Dtos.Auths.UserPermissionDto",
+                    "typeSimple": "General.Backend.Application.Contracts.Dtos.Auths.UserPermissionDto",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "GetCaptchaAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "General.Backend.Application.Contracts.Dtos.Auths.CaptchaDto",
+                    "typeSimple": "General.Backend.Application.Contracts.Dtos.Auths.CaptchaDto",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "RefreshAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "General.Backend.Application.Contracts.Dtos.Auths.RefreshTokenCreateDto, General.Backend.Application.Contracts",
+                      "type": "General.Backend.Application.Contracts.Dtos.Auths.RefreshTokenCreateDto",
+                      "typeSimple": "General.Backend.Application.Contracts.Dtos.Auths.RefreshTokenCreateDto",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "General.Backend.Application.Contracts.Dtos.Auths.LoginUserDto",
+                    "typeSimple": "General.Backend.Application.Contracts.Dtos.Auths.LoginUserDto",
+                    "summary": null
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "LoginAsyncByInput": {
+              "uniqueName": "LoginAsyncByInput",
+              "name": "LoginAsync",
+              "httpMethod": "POST",
+              "url": "api/app/auth/login",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "General.Backend.Application.Contracts.Dtos.Auths.UserLoginDto, General.Backend.Application.Contracts",
+                  "type": "General.Backend.Application.Contracts.Dtos.Auths.UserLoginDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Auths.UserLoginDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "General.Backend.Application.Contracts.Dtos.Auths.UserLoginDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Auths.UserLoginDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "General.Backend.Application.Contracts.Dtos.Auths.LoginUserDto",
+                "typeSimple": "General.Backend.Application.Contracts.Dtos.Auths.LoginUserDto",
+                "summary": null
+              },
+              "allowAnonymous": true,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IAuthAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "GetUserAsync": {
+              "uniqueName": "GetUserAsync",
+              "name": "GetUserAsync",
+              "httpMethod": "GET",
+              "url": "api/app/auth/user",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "General.Backend.Application.Contracts.Dtos.Auths.UserPermissionDto",
+                "typeSimple": "General.Backend.Application.Contracts.Dtos.Auths.UserPermissionDto",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IAuthAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "GetCaptchaAsync": {
+              "uniqueName": "GetCaptchaAsync",
+              "name": "GetCaptchaAsync",
+              "httpMethod": "GET",
+              "url": "api/app/auth/captcha",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "General.Backend.Application.Contracts.Dtos.Auths.CaptchaDto",
+                "typeSimple": "General.Backend.Application.Contracts.Dtos.Auths.CaptchaDto",
+                "summary": null
+              },
+              "allowAnonymous": true,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IAuthAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "RefreshAsyncByInput": {
+              "uniqueName": "RefreshAsyncByInput",
+              "name": "RefreshAsync",
+              "httpMethod": "POST",
+              "url": "api/app/auth/refresh",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "General.Backend.Application.Contracts.Dtos.Auths.RefreshTokenCreateDto, General.Backend.Application.Contracts",
+                  "type": "General.Backend.Application.Contracts.Dtos.Auths.RefreshTokenCreateDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Auths.RefreshTokenCreateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "General.Backend.Application.Contracts.Dtos.Auths.RefreshTokenCreateDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Auths.RefreshTokenCreateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "General.Backend.Application.Contracts.Dtos.Auths.LoginUserDto",
+                "typeSimple": "General.Backend.Application.Contracts.Dtos.Auths.LoginUserDto",
+                "summary": null
+              },
+              "allowAnonymous": true,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IAuthAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            }
+          }
+        },
+        "General.Backend.Application.FtpAppService": {
+          "controllerName": "Ftp",
+          "controllerGroupName": "Ftp",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "General.Backend.Application.FtpAppService",
+          "summary": null,
+          "remarks": null,
+          "description": null,
+          "displayName": null,
+          "interfaces": [
+            {
+              "type": "General.Backend.Application.Contracts.IFtpAppService",
+              "name": "IFtpAppService",
+              "methods": [
+                {
+                  "name": "GetFileNamesAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "filePathDirectory",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<System.String>",
+                    "typeSimple": "[string]",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "ExistAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "filePath",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Boolean",
+                    "typeSimple": "boolean",
+                    "summary": null
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetFileNamesAsyncByFilePathDirectory": {
+              "uniqueName": "GetFileNamesAsyncByFilePathDirectory",
+              "name": "GetFileNamesAsync",
+              "httpMethod": "GET",
+              "url": "api/app/ftp/file-names",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "filePathDirectory",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "filePathDirectory",
+                  "name": "filePathDirectory",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Query",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<System.String>",
+                "typeSimple": "[string]",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IFtpAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "ExistAsyncByFilePath": {
+              "uniqueName": "ExistAsyncByFilePath",
+              "name": "ExistAsync",
+              "httpMethod": "POST",
+              "url": "api/app/ftp/exist",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "filePath",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "filePath",
+                  "name": "filePath",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Query",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "System.Boolean",
+                "typeSimple": "boolean",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IFtpAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            }
+          }
+        },
+        "General.Backend.Application.LocalizationAppService": {
+          "controllerName": "Localization",
+          "controllerGroupName": "Localization",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "General.Backend.Application.LocalizationAppService",
+          "summary": null,
+          "remarks": null,
+          "description": null,
+          "displayName": null,
+          "interfaces": [
+            {
+              "type": "General.Backend.Application.Contracts.ILocalizationAppService",
+              "name": "ILocalizationAppService",
+              "methods": [
+                {
+                  "name": "GetHelloWorld",
+                  "parametersOnMethod": [
+                    {
+                      "name": "culture",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": true,
+                      "defaultValue": "zh-CN",
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Object",
+                    "typeSimple": "object",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "GetHelloName",
+                  "parametersOnMethod": [
+                    {
+                      "name": "culture",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": true,
+                      "defaultValue": "en-US",
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    },
+                    {
+                      "name": "name",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": true,
+                      "defaultValue": "LiHua",
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Object",
+                    "typeSimple": "object",
+                    "summary": null
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetHelloWorldByCulture": {
+              "uniqueName": "GetHelloWorldByCulture",
+              "name": "GetHelloWorld",
+              "httpMethod": "GET",
+              "url": "api/app/localization/hello-world",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "culture",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": true,
+                  "defaultValue": "zh-CN",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "culture",
+                  "name": "culture",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "System.Object",
+                "typeSimple": "object",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.ILocalizationAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "GetHelloNameByCultureAndName": {
+              "uniqueName": "GetHelloNameByCultureAndName",
+              "name": "GetHelloName",
+              "httpMethod": "GET",
+              "url": "api/app/localization/hello-name",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "culture",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": true,
+                  "defaultValue": "en-US",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                },
+                {
+                  "name": "name",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": true,
+                  "defaultValue": "LiHua",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "culture",
+                  "name": "culture",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                },
+                {
+                  "nameOnMethod": "name",
+                  "name": "name",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "System.Object",
+                "typeSimple": "object",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.ILocalizationAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            }
+          }
+        },
+        "General.Backend.Application.MenuAppService": {
+          "controllerName": "Menu",
+          "controllerGroupName": "Menu",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "General.Backend.Application.MenuAppService",
+          "summary": null,
+          "remarks": null,
+          "description": null,
+          "displayName": null,
+          "interfaces": [
+            {
+              "type": "General.Backend.Application.Contracts.IMenuAppService",
+              "name": "IMenuAppService",
+              "methods": [
+                {
+                  "name": "GetPermissionAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "General.Backend.Application.Contracts.Dtos.Menus.PermissionDto",
+                    "typeSimple": "General.Backend.Application.Contracts.Dtos.Menus.PermissionDto",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "UpdateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "General.Backend.Application.Contracts.Dtos.Menus.PermissionUpdateDto, General.Backend.Application.Contracts",
+                      "type": "General.Backend.Application.Contracts.Dtos.Menus.PermissionUpdateDto",
+                      "typeSimple": "General.Backend.Application.Contracts.Dtos.Menus.PermissionUpdateDto",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void",
+                    "summary": null
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetPermissionAsyncById": {
+              "uniqueName": "GetPermissionAsyncById",
+              "name": "GetPermissionAsync",
+              "httpMethod": "GET",
+              "url": "api/app/menu/{id}/permission",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "General.Backend.Application.Contracts.Dtos.Menus.PermissionDto",
+                "typeSimple": "General.Backend.Application.Contracts.Dtos.Menus.PermissionDto",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IMenuAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "UpdateAsyncByInput": {
+              "uniqueName": "UpdateAsyncByInput",
+              "name": "UpdateAsync",
+              "httpMethod": "PUT",
+              "url": "api/app/menu",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "General.Backend.Application.Contracts.Dtos.Menus.PermissionUpdateDto, General.Backend.Application.Contracts",
+                  "type": "General.Backend.Application.Contracts.Dtos.Menus.PermissionUpdateDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Menus.PermissionUpdateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "General.Backend.Application.Contracts.Dtos.Menus.PermissionUpdateDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Menus.PermissionUpdateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IMenuAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            }
+          }
+        },
+        "General.Backend.Application.RoleAppService": {
+          "controllerName": "Role",
+          "controllerGroupName": "Role",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "General.Backend.Application.RoleAppService",
+          "summary": null,
+          "remarks": null,
+          "description": null,
+          "displayName": null,
+          "interfaces": [
+            {
+              "type": "General.Backend.Application.Contracts.IRoleAppService",
+              "name": "IRoleAppService",
+              "methods": [
+                {
+                  "name": "GetListAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "General.Backend.Application.Contracts.Dtos.Roles.RoleQueryDto, General.Backend.Application.Contracts",
+                      "type": "General.Backend.Application.Contracts.Dtos.Roles.RoleQueryDto",
+                      "typeSimple": "General.Backend.Application.Contracts.Dtos.Roles.RoleQueryDto",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<General.Backend.Application.Contracts.Dtos.Roles.RoleDto>",
+                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<General.Backend.Application.Contracts.Dtos.Roles.RoleDto>",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "CreateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "General.Backend.Application.Contracts.Dtos.Roles.RoleCreateDto, General.Backend.Application.Contracts",
+                      "type": "General.Backend.Application.Contracts.Dtos.Roles.RoleCreateDto",
+                      "typeSimple": "General.Backend.Application.Contracts.Dtos.Roles.RoleCreateDto",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "General.Backend.Application.Contracts.Dtos.Roles.RoleDto",
+                    "typeSimple": "General.Backend.Application.Contracts.Dtos.Roles.RoleDto",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "UpdateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "General.Backend.Application.Contracts.Dtos.Roles.RoleUpdateDto, General.Backend.Application.Contracts",
+                      "type": "General.Backend.Application.Contracts.Dtos.Roles.RoleUpdateDto",
+                      "typeSimple": "General.Backend.Application.Contracts.Dtos.Roles.RoleUpdateDto",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "General.Backend.Application.Contracts.Dtos.Roles.RoleDto",
+                    "typeSimple": "General.Backend.Application.Contracts.Dtos.Roles.RoleDto",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "GetAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "General.Backend.Application.Contracts.Dtos.Roles.RoleDto",
+                    "typeSimple": "General.Backend.Application.Contracts.Dtos.Roles.RoleDto",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "DeleteAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "ids",
+                      "typeAsString": "System.Collections.Generic.List`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib",
+                      "type": "System.Collections.Generic.List<System.Guid>",
+                      "typeSimple": "[string]",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "GetAllRoleAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<General.Backend.Application.Contracts.Dtos.Roles.RoleMapDto>",
+                    "typeSimple": "[General.Backend.Application.Contracts.Dtos.Roles.RoleMapDto]",
+                    "summary": null
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetListAsyncByInput": {
+              "uniqueName": "GetListAsyncByInput",
+              "name": "GetListAsync",
+              "httpMethod": "GET",
+              "url": "api/app/role",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "General.Backend.Application.Contracts.Dtos.Roles.RoleQueryDto, General.Backend.Application.Contracts",
+                  "type": "General.Backend.Application.Contracts.Dtos.Roles.RoleQueryDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Roles.RoleQueryDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "Name",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "SortType",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "SortField",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "PageSize",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "PageIndex",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<General.Backend.Application.Contracts.Dtos.Roles.RoleDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<General.Backend.Application.Contracts.Dtos.Roles.RoleDto>",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IRoleAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "CreateAsyncByInput": {
+              "uniqueName": "CreateAsyncByInput",
+              "name": "CreateAsync",
+              "httpMethod": "POST",
+              "url": "api/app/role",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "General.Backend.Application.Contracts.Dtos.Roles.RoleCreateDto, General.Backend.Application.Contracts",
+                  "type": "General.Backend.Application.Contracts.Dtos.Roles.RoleCreateDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Roles.RoleCreateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "General.Backend.Application.Contracts.Dtos.Roles.RoleCreateDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Roles.RoleCreateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "General.Backend.Application.Contracts.Dtos.Roles.RoleDto",
+                "typeSimple": "General.Backend.Application.Contracts.Dtos.Roles.RoleDto",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IRoleAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "UpdateAsyncByInput": {
+              "uniqueName": "UpdateAsyncByInput",
+              "name": "UpdateAsync",
+              "httpMethod": "PUT",
+              "url": "api/app/role",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "General.Backend.Application.Contracts.Dtos.Roles.RoleUpdateDto, General.Backend.Application.Contracts",
+                  "type": "General.Backend.Application.Contracts.Dtos.Roles.RoleUpdateDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Roles.RoleUpdateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "General.Backend.Application.Contracts.Dtos.Roles.RoleUpdateDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Roles.RoleUpdateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "General.Backend.Application.Contracts.Dtos.Roles.RoleDto",
+                "typeSimple": "General.Backend.Application.Contracts.Dtos.Roles.RoleDto",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IRoleAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "GetAsyncById": {
+              "uniqueName": "GetAsyncById",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/app/role/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "General.Backend.Application.Contracts.Dtos.Roles.RoleDto",
+                "typeSimple": "General.Backend.Application.Contracts.Dtos.Roles.RoleDto",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IRoleAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "DeleteAsyncByIds": {
+              "uniqueName": "DeleteAsyncByIds",
+              "name": "DeleteAsync",
+              "httpMethod": "DELETE",
+              "url": "api/app/role",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "ids",
+                  "typeAsString": "System.Collections.Generic.List`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib",
+                  "type": "System.Collections.Generic.List<System.Guid>",
+                  "typeSimple": "[string]",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "ids",
+                  "name": "ids",
+                  "jsonName": null,
+                  "type": "System.Collections.Generic.List<System.Guid>",
+                  "typeSimple": "[string]",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IRoleAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "GetAllRoleAsync": {
+              "uniqueName": "GetAllRoleAsync",
+              "name": "GetAllRoleAsync",
+              "httpMethod": "GET",
+              "url": "api/app/role/role",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<General.Backend.Application.Contracts.Dtos.Roles.RoleMapDto>",
+                "typeSimple": "[General.Backend.Application.Contracts.Dtos.Roles.RoleMapDto]",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IRoleAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            }
+          }
+        },
+        "General.Backend.Application.SystemSettingAppService": {
+          "controllerName": "SystemSetting",
+          "controllerGroupName": "SystemSetting",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "General.Backend.Application.SystemSettingAppService",
+          "summary": null,
+          "remarks": null,
+          "description": null,
+          "displayName": null,
+          "interfaces": [
+            {
+              "type": "General.Backend.Application.Contracts.ISystemSettingAppService",
+              "name": "ISystemSettingAppService",
+              "methods": [
+                {
+                  "name": "GetListAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<General.Backend.Application.Contracts.Dtos.SystemSettings.SystemSettingDto>",
+                    "typeSimple": "[General.Backend.Application.Contracts.Dtos.SystemSettings.SystemSettingDto]",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "UpdateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "General.Backend.Application.Contracts.Dtos.SystemSettings.SystemSettingsUpdateDto, General.Backend.Application.Contracts",
+                      "type": "General.Backend.Application.Contracts.Dtos.SystemSettings.SystemSettingsUpdateDto",
+                      "typeSimple": "General.Backend.Application.Contracts.Dtos.SystemSettings.SystemSettingsUpdateDto",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void",
+                    "summary": null
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetListAsync": {
+              "uniqueName": "GetListAsync",
+              "name": "GetListAsync",
+              "httpMethod": "GET",
+              "url": "api/app/system-setting",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<General.Backend.Application.Contracts.Dtos.SystemSettings.SystemSettingDto>",
+                "typeSimple": "[General.Backend.Application.Contracts.Dtos.SystemSettings.SystemSettingDto]",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.ISystemSettingAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "UpdateAsyncByInput": {
+              "uniqueName": "UpdateAsyncByInput",
+              "name": "UpdateAsync",
+              "httpMethod": "PUT",
+              "url": "api/app/system-setting",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "General.Backend.Application.Contracts.Dtos.SystemSettings.SystemSettingsUpdateDto, General.Backend.Application.Contracts",
+                  "type": "General.Backend.Application.Contracts.Dtos.SystemSettings.SystemSettingsUpdateDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.SystemSettings.SystemSettingsUpdateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "General.Backend.Application.Contracts.Dtos.SystemSettings.SystemSettingsUpdateDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.SystemSettings.SystemSettingsUpdateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.ISystemSettingAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            }
+          }
+        },
+        "General.Backend.Application.UserAppService": {
+          "controllerName": "User",
+          "controllerGroupName": "User",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "General.Backend.Application.UserAppService",
+          "summary": null,
+          "remarks": null,
+          "description": null,
+          "displayName": null,
+          "interfaces": [
+            {
+              "type": "General.Backend.Application.Contracts.IUserAppService",
+              "name": "IUserAppService",
+              "methods": [
+                {
+                  "name": "GetListAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "General.Backend.Application.Contracts.Dtos.Users.UserQueryDto, General.Backend.Application.Contracts",
+                      "type": "General.Backend.Application.Contracts.Dtos.Users.UserQueryDto",
+                      "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserQueryDto",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "Volo.Abp.Application.Dtos.PagedResultDto<General.Backend.Application.Contracts.Dtos.Users.UserDto>",
+                    "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<General.Backend.Application.Contracts.Dtos.Users.UserDto>",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "CreateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "General.Backend.Application.Contracts.Dtos.Users.UserCreateDto, General.Backend.Application.Contracts",
+                      "type": "General.Backend.Application.Contracts.Dtos.Users.UserCreateDto",
+                      "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserCreateDto",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                    "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "UpdateAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "input",
+                      "typeAsString": "General.Backend.Application.Contracts.Dtos.Users.UserUpdateDto, General.Backend.Application.Contracts",
+                      "type": "General.Backend.Application.Contracts.Dtos.Users.UserUpdateDto",
+                      "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserUpdateDto",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                    "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "GetAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                    "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "DeleteAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "ids",
+                      "typeAsString": "System.Collections.Generic.List`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib",
+                      "type": "System.Collections.Generic.List<System.Guid>",
+                      "typeSimple": "[string]",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "UnfreezeAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                    "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                    "summary": null
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetListAsyncByInput": {
+              "uniqueName": "GetListAsyncByInput",
+              "name": "GetListAsync",
+              "httpMethod": "GET",
+              "url": "api/app/user",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "General.Backend.Application.Contracts.Dtos.Users.UserQueryDto, General.Backend.Application.Contracts",
+                  "type": "General.Backend.Application.Contracts.Dtos.Users.UserQueryDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserQueryDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "Account",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Name",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "SortType",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "SortField",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "PageSize",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "PageIndex",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<General.Backend.Application.Contracts.Dtos.Users.UserDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<General.Backend.Application.Contracts.Dtos.Users.UserDto>",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IUserAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "CreateAsyncByInput": {
+              "uniqueName": "CreateAsyncByInput",
+              "name": "CreateAsync",
+              "httpMethod": "POST",
+              "url": "api/app/user",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "General.Backend.Application.Contracts.Dtos.Users.UserCreateDto, General.Backend.Application.Contracts",
+                  "type": "General.Backend.Application.Contracts.Dtos.Users.UserCreateDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserCreateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "General.Backend.Application.Contracts.Dtos.Users.UserCreateDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserCreateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IUserAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "UpdateAsyncByInput": {
+              "uniqueName": "UpdateAsyncByInput",
+              "name": "UpdateAsync",
+              "httpMethod": "PUT",
+              "url": "api/app/user",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "General.Backend.Application.Contracts.Dtos.Users.UserUpdateDto, General.Backend.Application.Contracts",
+                  "type": "General.Backend.Application.Contracts.Dtos.Users.UserUpdateDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserUpdateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "General.Backend.Application.Contracts.Dtos.Users.UserUpdateDto",
+                  "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserUpdateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IUserAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "GetAsyncById": {
+              "uniqueName": "GetAsyncById",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "api/app/user/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IUserAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "DeleteAsyncByIds": {
+              "uniqueName": "DeleteAsyncByIds",
+              "name": "DeleteAsync",
+              "httpMethod": "DELETE",
+              "url": "api/app/user",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "ids",
+                  "typeAsString": "System.Collections.Generic.List`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib",
+                  "type": "System.Collections.Generic.List<System.Guid>",
+                  "typeSimple": "[string]",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "ids",
+                  "name": "ids",
+                  "jsonName": null,
+                  "type": "System.Collections.Generic.List<System.Guid>",
+                  "typeSimple": "[string]",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IUserAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "UnfreezeAsyncById": {
+              "uniqueName": "UnfreezeAsyncById",
+              "name": "UnfreezeAsync",
+              "httpMethod": "POST",
+              "url": "api/app/user/{id}/unfreeze",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                "typeSimple": "General.Backend.Application.Contracts.Dtos.Users.UserDto",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.Backend.Application.Contracts.IUserAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            }
+          }
+        },
+        "General.InformationCollection.Application.ModuleAppService": {
+          "controllerName": "Module",
+          "controllerGroupName": "Module",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "General.InformationCollection.Application.ModuleAppService",
+          "summary": null,
+          "remarks": null,
+          "description": null,
+          "displayName": null,
+          "interfaces": [
+            {
+              "type": "General.InformationCollection.Application.Contracts.IModuleAppService",
+              "name": "IModuleAppService",
+              "methods": [
+                {
+                  "name": "GetListAsync",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<General.InformationCollection.Application.Contracts.Dtos.Modules.ModuleDto>",
+                    "typeSimple": "[General.InformationCollection.Application.Contracts.Dtos.Modules.ModuleDto]",
+                    "summary": null
+                  }
+                },
+                {
+                  "name": "GetByNameAsync",
+                  "parametersOnMethod": [
+                    {
+                      "name": "name",
+                      "typeAsString": "System.String, System.Private.CoreLib",
+                      "type": "System.String",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null,
+                      "summary": null,
+                      "description": null,
+                      "displayName": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "General.InformationCollection.Application.Contracts.Dtos.Modules.ModuleDto",
+                    "typeSimple": "General.InformationCollection.Application.Contracts.Dtos.Modules.ModuleDto",
+                    "summary": null
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "GetListAsync": {
+              "uniqueName": "GetListAsync",
+              "name": "GetListAsync",
+              "httpMethod": "GET",
+              "url": "api/app/module",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<General.InformationCollection.Application.Contracts.Dtos.Modules.ModuleDto>",
+                "typeSimple": "[General.InformationCollection.Application.Contracts.Dtos.Modules.ModuleDto]",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.InformationCollection.Application.Contracts.IModuleAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            },
+            "GetByNameAsyncByName": {
+              "uniqueName": "GetByNameAsyncByName",
+              "name": "GetByNameAsync",
+              "httpMethod": "GET",
+              "url": "api/app/module/by-name",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "name",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "name",
+                  "name": "name",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "",
+                  "summary": null,
+                  "description": null,
+                  "displayName": null
+                }
+              ],
+              "returnValue": {
+                "type": "General.InformationCollection.Application.Contracts.Dtos.Modules.ModuleDto",
+                "typeSimple": "General.InformationCollection.Application.Contracts.Dtos.Modules.ModuleDto",
+                "summary": null
+              },
+              "allowAnonymous": null,
+              "authorizeDatas": null,
+              "implementFrom": "General.InformationCollection.Application.Contracts.IModuleAppService",
+              "summary": null,
+              "remarks": null,
+              "description": null,
+              "displayName": null
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}

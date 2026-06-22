@@ -1,17 +1,17 @@
-﻿using General.StaticClient.WithContracts.HttpApi.Client;
+﻿using General.StaticClient.WithoutContracts.HttpApi.Client;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Autofac;
 using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
 
-namespace General.StaticClient.WithContracts
+namespace General.StaticClient.WithoutContracts
 {
     [DependsOn(
         typeof(AbpAspNetCoreMvcModule),
         typeof(AbpAutofacModule),
         typeof(AbpSwashbuckleModule),
-        typeof(GeneralStaticClientWithContractsModule)
+        typeof(GeneralStaticClientWithoutContractsModule)
         )]
     public class GeneralStaticClientModule : AbpModule
     {

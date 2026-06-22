@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\General.Backend.Domain.Shared\General.Backend.Domain.Shared.csproj" />
+    <ProjectReference Include="..\Modules\InformationCollection\General.InformationCollection.Application.Contracts\General.InformationCollection.Application.Contracts.csproj" />
 	<Using Include="Volo.Abp.Application.Services" />
 	<Using Include="Volo.Abp.Application.Dtos" />
 	<Using Include="Volo.Abp.Auditing" />

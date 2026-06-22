@@ -8,11 +8,11 @@ using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 
 // ReSharper disable once CheckNamespace
-namespace General.Backend.Application;
+namespace General.Backend.Application.Contracts;
 
-public interface IFtpAppService : IApplicationService
+public interface ILocalizationAppService : IApplicationService
 {
-    Task<List<String>> GetFileNamesAsync(string filePathDirectory);
+    public object GetHelloWorld(string culture);
 
-    Task<bool> ExistAsync(string filePath);
+    public object GetHelloName(string culture, string name);
 }
