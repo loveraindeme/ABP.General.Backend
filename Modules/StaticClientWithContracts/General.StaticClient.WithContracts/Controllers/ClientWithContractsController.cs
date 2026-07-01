@@ -2,7 +2,6 @@
 using General.Backend.Application.Contracts.Dtos.Users;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
-using Volo.Abp.VirtualFileSystem;
 
 namespace General.StaticClient.WithContracts.Controllers
 {
@@ -10,13 +9,10 @@ namespace General.StaticClient.WithContracts.Controllers
     public class ClientWithContractsController : AbpController
     {
         private readonly IUserAppService _userAppService;
-        private readonly IVirtualFileProvider _virtualFileProvider;
 
-        public ClientWithContractsController(IUserAppService userAppService,
-            IVirtualFileProvider virtualFileProvider)
+        public ClientWithContractsController(IUserAppService userAppService)
         {
             _userAppService = userAppService;
-            _virtualFileProvider = virtualFileProvider;
         }
 
         [HttpGet("user/{id}")]
@@ -29,12 +25,12 @@ namespace General.StaticClient.WithContracts.Controllers
         [HttpGet("users")]
         public async Task<List<UserDto>> GetUsersAsync()
         {
-            var a = _virtualFileProvider.GetDirectoryContents("/");
-            var b = _virtualFileProvider.GetDirectoryContents("/ClientProxies");
             var users = await _userAppService.GetListAsync(new UserQueryDto
             {
                 SortType = "asc",
-                SortField = "Id"
+                SortField = "Id",
+                PageIndex = 1,
+                PageSize = 10
             });
             return users.Items.ToList();
         }

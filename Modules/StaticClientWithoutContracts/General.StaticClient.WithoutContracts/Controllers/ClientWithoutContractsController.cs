@@ -6,11 +6,11 @@ using Volo.Abp.AspNetCore.Mvc;
 namespace General.StaticClient.WithoutContracts.Controllers
 {
     [Route("api/[Controller]")]
-    public class ClientWithContractsController : AbpController
+    public class ClientWithoutContractsController : AbpController
     {
         private readonly IUserAppService _userAppService;
 
-        public ClientWithContractsController(IUserAppService userAppService)
+        public ClientWithoutContractsController(IUserAppService userAppService)
         {
             _userAppService = userAppService;
         }

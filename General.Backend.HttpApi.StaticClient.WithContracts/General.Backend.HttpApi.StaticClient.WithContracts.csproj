@@ -9,11 +9,8 @@
 
   <ItemGroup>
 	<EmbeddedResource Include="ClientProxies\app-generate-proxy.json">
-	  <Link>ClientProxies\app-generate-proxy.json</Link>
-	</EmbeddedResource>
-	<None Include="ClientProxies\app-generate-proxy.json" Link="ClientProxies\app-generate-proxy.json">
 	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	</None>
+	</EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
