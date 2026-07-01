@@ -13,12 +13,12 @@ namespace General.DynamicClient.HttpApi.Client
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            context.Services.Configure<AbpRemoteServiceOptions>(options =>
-            {
-                options.RemoteServices.Add(
-                    GeneralHttpApiClientModule.RemoteServiceName, 
-                    new RemoteServiceConfiguration("http://localhost:5025/"));
-            });
+            //context.Services.Configure<AbpRemoteServiceOptions>(options =>
+            //{
+            //    options.RemoteServices.Add(
+            //        GeneralHttpApiClientModule.RemoteServiceName, 
+            //        new RemoteServiceConfiguration("http://localhost:5025/"));
+            //});
         }
     }
 }
